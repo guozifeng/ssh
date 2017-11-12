@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Spring+SpringMVC+Mybatis+Maven+MySql框架搭建与分页实例   #
 **1. 工程运行环境**  
 JDK:1.6  
@@ -80,3 +81,5 @@ Spring+SpringMVC+Mybatis+Maven
     INSERT INTO t_user (USER_ID, USER_NAME, USER_PASSWORD, USER_EMAIL) VALUES (45, 'apple', 'sd', '45567@qq.com');  
     INSERT INTO t_user (USER_ID, USER_NAME, USER_PASSWORD, USER_EMAIL) VALUES (46, 'apple', 'gs', '456@qq.com');  
    
+=======
+>>>>>>> branch 'master' of https://github.com/guozifeng/spring-fecture.git
