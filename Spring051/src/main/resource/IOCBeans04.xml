@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+      
+	<!-- 1、如果仅希望扫描特定的类而非基包下的所有类，可使用resource-pattern属性过滤特定的类 
+	<context:component-scan base-package="com.zhangguo.Spring051"
+		resource-pattern="ioc04/A*.class">
+	</context:component-scan>-->
+	
+	<!--2、扫描注解了org.springframework.stereotype.Repository的类
+	 exclude-filter表示排除，include-filter表示包含，可以有多个
+	<context:component-scan base-package="com.zhangguo.Spring051.ioc04"> 
+		<context:exclude-filter type="annotation" expression="org.springframework.stereotype.Repository" />
+		<context:include-filter type="annotation" expression="org.springframework.stereotype.Service"/>
+    </context:component-scan>-->
+    
+   <!--3、aspectj类型，扫描dao下所有的类，排除entity下所有的类
+  <context:component-scan base-package="com.zhangguo.anno" >
+  <context:include-filter type="aspectj" expression="com.zhangguo.anno.dao.*.*"/>
+  <context:exclude-filter type="aspectj" expression="com.zhangguo.anno.entity.*.*"/>
+</context:component-scan>-->
+    
+    <!--4、regex类型，使用正则 -->
+    <context:component-scan base-package="com.zhangguo.Spring051.ioc04">
+        <context:exclude-filter type="regex" expression="A\.*"/>
+	</context:component-scan>
+</beans>
